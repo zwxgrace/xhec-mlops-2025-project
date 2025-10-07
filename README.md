@@ -2,9 +2,7 @@
 
 # MLOps Project: Abalone Age Prediction
 
-[![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10-blue.svg)]()
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)]()
 [![Linting: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-informational?logo=pre-commit&logoColor=white)](https://github.com/artefactory/xhec-mlops-project-student/blob/main/.pre-commit-config.yaml)
 </div>
@@ -37,7 +35,7 @@ Traditionally, determining an abalone's age requires:
 ### Setup Steps
 
 1. **Fork this repository** 
-   - ⚠️ **Important**: Uncheck "Copy the `master` branch only" to get all project branches
+   - ⚠️ **Important**: Uncheck "Copy the `main` branch only" to get all project branches
    
 2. **Add your team members** as admins to your forked repository
 
@@ -95,7 +93,7 @@ For each numbered branch:
 git checkout branch_number_i
 
 # Get latest changes (except for branch_1)
-git pull origin master
+git pull origin main
 # Note: A VIM window might open - just type ":wq" to close it
 
 # Push your branch
@@ -197,4 +195,4 @@ When you're done, your repository should contain:
 
 ---
 
-**Ready to start? Head to branch_1 and read PR_1.md for your first task! 🚀**
+**Ready to start? Head to branch_0 and read PR_0.md for your first task! 🚀**
