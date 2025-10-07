@@ -2,7 +2,7 @@
 
 # MLOps Project: Abalone Age Prediction
 
-[![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)]()
+[![Python Version](https://img.shields.io/badge/python-3.10%20or%203.11-blue.svg)]()
 [![Linting: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-informational?logo=pre-commit&logoColor=white)](https://github.com/artefactory/xhec-mlops-project-student/blob/main/.pre-commit-config.yaml)
 </div>
@@ -78,8 +78,8 @@ This project is organized into numbered branches, each representing a step in bu
 **Here's how it works**:
 
 1. **Each branch = One pull request** with specific tasks
-2. **Follow the numbers** (branch_1, branch_2, etc.) in order
-3. **Read the PR instructions** (PR_1.md, PR_2.md, etc.) before starting
+2. **Follow the numbers** (branch_0, branch_1, etc.) in order
+3. **Read the PR instructions** (PR_0.md, PR_1.md, etc.) before starting
 4. **Complete all TODOs** in that branch's code
 5. **Create a pull request** when done
 6. **Merge and move to the next branch**
