@@ -88,6 +88,3 @@ secrets/*
 
 # Mac files
 .DS_Store
-
-# All CSV files
-*.csv
