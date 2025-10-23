@@ -1,0 +1,10 @@
+artifact_location: file:///d:/X-HEC/ML%20artefact%20project/xhec-mlops-2025-project/notebooks/mlruns/896408972567069252/models/m-e017343657f14778881b4153f126a87b/artifacts
+creation_timestamp: 1761213307041
+experiment_id: '896408972567069252'
+last_updated_timestamp: 1761213309610
+model_id: m-e017343657f14778881b4153f126a87b
+model_type: null
+name: model
+source_run_id: dbfa6851bb944953a1e7f0a5bf37e511
+status: 2
+status_message: null

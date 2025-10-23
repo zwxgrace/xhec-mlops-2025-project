@@ -1,0 +1,10 @@
+artifact_location: file:///d:/X-HEC/ML%20artefact%20project/xhec-mlops-2025-project/notebooks/mlruns/896408972567069252/models/m-1ba4ff4ededd4daa8df048fe3d3503a0/artifacts
+creation_timestamp: 1761211032720
+experiment_id: '896408972567069252'
+last_updated_timestamp: 1761211037292
+model_id: m-1ba4ff4ededd4daa8df048fe3d3503a0
+model_type: null
+name: linear_regression_model
+source_run_id: d9770745561146c9bee93fe73211898f
+status: 2
+status_message: null

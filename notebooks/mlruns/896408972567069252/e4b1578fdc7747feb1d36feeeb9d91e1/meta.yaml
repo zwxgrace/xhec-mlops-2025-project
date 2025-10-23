@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/X-HEC/ML%20artefact%20project/xhec-mlops-2025-project/notebooks/mlruns/896408972567069252/e4b1578fdc7747feb1d36feeeb9d91e1/artifacts
+end_time: 1761211630232
+entry_point_name: ''
+experiment_id: '896408972567069252'
+lifecycle_stage: active
+run_id: e4b1578fdc7747feb1d36feeeb9d91e1
+run_name: Linear_Regression_Baseline
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761211627330
+status: 3
+tags: []
+user_id: 芒果西米露

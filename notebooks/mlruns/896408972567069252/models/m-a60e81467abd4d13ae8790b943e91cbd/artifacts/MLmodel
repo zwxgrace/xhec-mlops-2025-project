@@ -1,0 +1,22 @@
+artifact_path: file:///d:/X-HEC/ML%20artefact%20project/xhec-mlops-2025-project/notebooks/mlruns/896408972567069252/models/m-a60e81467abd4d13ae8790b943e91cbd/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.5.0
+model_id: m-a60e81467abd4d13ae8790b943e91cbd
+model_size_bytes: 547
+model_uuid: m-a60e81467abd4d13ae8790b943e91cbd
+prompts: null
+run_id: 7dfcadc269b4497a867759cf6967ff56
+utc_time_created: '2025-10-23 09:58:03.480373'
