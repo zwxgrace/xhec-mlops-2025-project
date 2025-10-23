@@ -1,2 +1,7 @@
 # TODO - complete with dev requirements (black, flake8, ruff, etc...)
 # Then, execute "pip-compile requirements-dev.in" to generate the file requirements-dev.txt
+
+pre-commit>=3.7.1
+ruff>=0.14.1
+uv>=0.4.20
+pip-tools>=7.4.1
