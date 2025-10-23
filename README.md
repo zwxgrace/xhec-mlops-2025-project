@@ -217,3 +217,18 @@ Key Effect: Defines a series of hooks (e.g., trailing-whitespace, check-yaml, ru
 Purpose: Sets up the CI/CD pipeline using GitHub Actions.
 
 Key Effect: Triggers an automated workflow on every push and pull_request. The workflow installs dependencies, runs all pre-commit checks, and executes pytest to ensure code functionality and adherence to quality standards before merging.
+
+### Train
+```bash
+uv run python -m src.modelling.main ./abalone.csv
+```
+
+### Predict (example)
+```bash
+uv run python - <<'PY'
+from src.modelling.predicting import predict_batch
+print(predict_batch('abalone.csv',
+  'src/web_service/local_objects/model.pkl',
+  'src/web_service/local_objects/preprocessor.pkl')[:5])
+PY
+```

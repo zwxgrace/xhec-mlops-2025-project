@@ -8,6 +8,7 @@ repos:
       - id: check-yaml
       - id: check-json
       - id: check-added-large-files
+        exclude: ^notebooks/.*\.ipynb$
 
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.9.5
@@ -19,6 +20,8 @@ repos:
     hooks:
       - id: ruff
         args: [--fix]
+        files: ^src/
       - id: ruff-format
+        files: ^src/
 
-exclude: ^(.svn|CVS|\.bzr|\.hg|\.git|__pycache__|\.tox|\.ipynb_checkpoints|assets|tests/assets/|venv/|\.venv/)
+exclude: ^(.svn|CVS|\.bzr|\.hg|\.git|__pycache__|\.tox|\.ipynb_checkpoints|assets|tests/assets/|venv/|\.venv/|notebooks/)
