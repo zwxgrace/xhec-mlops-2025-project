@@ -201,16 +201,19 @@ When you're done, your repository should contain:
 This project adopts modern MLOps practices by integrating robust dependency management, automated code quality checks, and a Continuous Integration pipeline.
 
 ① pyproject.toml (Dependency Management)
+
 Purpose: Defines all project dependencies and configuration settings.
 
 Key Effect: pydantic is added as a core runtime dependency；pre-commit and ruff are configured as development dependencies (within the dev group) for local tooling.
 
 ② pre-commit-config.yaml (Local Code Quality Checks)
+
 Purpose: Configures the Git hook manager (pre-commit) to run checks automatically before every commit.
 
 Key Effect: Defines a series of hooks (e.g., trailing-whitespace, check-yaml, ruff, ruff-format).These checks enforce code style and catch simple errors early, preventing bad code from entering the repository history.
 
 ③ github/workflows/ci.yaml (Continuous Integration Workflow)
+
 Purpose: Sets up the CI/CD pipeline using GitHub Actions.
 
 Key Effect: Triggers an automated workflow on every push and pull_request. The workflow installs dependencies, runs all pre-commit checks, and executes pytest to ensure code functionality and adherence to quality standards before merging.
