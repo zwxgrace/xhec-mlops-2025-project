@@ -1,16 +1,18 @@
 from __future__ import annotations
 from pathlib import Path
 from typing import Dict, Any
-
+import numpy as np
 import pandas as pd
 import joblib
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 
 from .preprocessing import preprocess_for_training
+from prefect import task
 
 
+@task(name="train-and-save", tags={"training", "model", "ml"})
 def train_and_save(
     data_path: str,
     model_path: str,
@@ -31,7 +33,7 @@ def train_and_save(
     model.fit(X_tr, y_tr)
 
     y_pred = model.predict(X_te)
-    rmse = mean_squared_error(y_te, y_pred, squared=False)
+    rmse = float(np.sqrt(np.mean((y_te - y_pred) ** 2)))
     r2 = r2_score(y_te, y_pred)
 
     Path(model_path).parent.mkdir(parents=True, exist_ok=True)

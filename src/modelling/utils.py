@@ -2,8 +2,10 @@
 from pathlib import Path
 import pickle
 from typing import Any
+from prefect import task
 
 
+@task(name="pickle-object", tags={"io", "serialize", "save"})
 def pickle_object(
     obj: Any, path: str | Path, *, protocol: int = pickle.HIGHEST_PROTOCOL
 ) -> Path:

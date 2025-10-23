@@ -1,0 +1,37 @@
+# Welcome to your prefect.yaml file! You can use this file for storing and managing
+# configuration for deploying your flows. We recommend committing this file to source
+# control along with your flow code.
+
+# Generic metadata about this project
+name: xhec-mlops-2025-project
+prefect-version: 3.4.25
+
+# build section allows you to manage and build docker images
+build: null
+
+# push section allows you to manage if and how this project is uploaded to remote locations
+push: null
+
+# pull section allows you to provide instructions for cloning this project in remote locations
+pull:
+- prefect.deployments.steps.set_working_directory:
+    directory: /Users/tiantiandawang/Desktop/MLops_project/xhec-mlops-2025-project
+
+# the deployments section allows you to provide configuration for deploying flows
+deployments:
+- name: train-model
+  version: null
+  tags: []
+  concurrency_limit: null
+  description: Train a model using the data at the given path and save the model (pickle).
+  entrypoint: src/modelling/main.py:train_flow
+  parameters: {}
+  work_pool:
+    name: mlops-pool
+    work_queue_name: null
+    job_variables: {}
+  schedules:
+  - interval: 3600.0
+    anchor_date: '2025-10-23T22:00:52.973939+00:00'
+    timezone: UTC
+    active: true
