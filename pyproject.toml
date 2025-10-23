@@ -12,11 +12,6 @@ authors = [
   { name = "Chenghao Yu", email = "chenghao.yu.fr@gmail.com" },
   { name = "Siyuan Song", email = "ssiyuan73@gmail.com" }
 ]
-  { name = "Jingyi FAN", email = "1155157249@link.cuhk.edu.hk" },
-  { name = "Han Wang", email = "han.wang.2024@polytechnique.edu" },
-  { name = "Chenghao Yu", email = "chenghao.yu.fr@gmail.com" },
-  { name = "Siyuan Song", email = "ssiyuan73@gmail.com" }
-] 
 
 description = "X-HEC MLOps Project on Abalone age prediction model"
 readme = "README.md"
