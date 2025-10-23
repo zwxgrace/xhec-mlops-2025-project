@@ -67,6 +67,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv_
+*.venv
+*venv
 
 # mypy
 .mypy_cache/
@@ -85,3 +88,6 @@ secrets/*
 
 # Mac files
 .DS_Store
+
+# All CSV files
+*.csv
