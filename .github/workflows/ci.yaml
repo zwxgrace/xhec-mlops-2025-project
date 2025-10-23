@@ -34,7 +34,9 @@ jobs:
         run: uv sync --dev
 
       - name: Run pre-commit hooks
-        run: uv run pre-commit run --all-files
+        run: 
+          source .venv/bin/activate
+          uv run pre-commit run --all-files --hook-stage pre-push --show-diff-on-failure
 
       - name: Run tests
         run: uv run pytest -q
