@@ -16,6 +16,4 @@ authors = [
 description = "X-HEC MLOps Project on Abalone age prediction model"
 requires-python = ">3.10" # TODO: update this version
 
-exclude = ["venv*", ".venv"]
-
 # TODO: add pydantic, pre-commit and ruff as a dependency
