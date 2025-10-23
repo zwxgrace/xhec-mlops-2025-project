@@ -17,7 +17,7 @@ Welcome to your MLOps project! In this hands-on project, you'll build a complete
 
 Traditionally, determining an abalone's age requires:
 1. Cutting the shell through the cone
-2. Staining it 
+2. Staining it
 3. Counting rings under a microscope (very time-consuming!)
 
 **Your Goal**: Use easier-to-obtain physical measurements (shell weight, diameter, etc.) to predict the age automatically.
@@ -34,15 +34,15 @@ Traditionally, determining an abalone's age requires:
 
 ### Setup Steps
 
-1. **Fork this repository** 
+1. **Fork this repository**
    - ⚠️ **Important**: Uncheck "Copy the `main` branch only" to get all project branches
-   
+
 2. **Add your team members** as admins to your forked repository
 
 3. **Set up your development environment**:
    ```bash
    # Create and activate a virtual environment
-   uv sync 
+   uv sync
    source venv/bin/activate # on Windows: venv\Scripts\activate
 
    # Install pre-commit hooks for code quality
@@ -54,7 +54,7 @@ Traditionally, determining an abalone's age requires:
 
 By the end of this project, you'll have created:
 
-### 🤖 **Automated ML Pipeline** 
+### 🤖 **Automated ML Pipeline**
 - Training workflows using Prefect
 - Automatic model retraining on schedule
 - Reproducible model and data processing
@@ -67,7 +67,7 @@ By the end of this project, you'll have created:
 ### 📊 **Production-Ready Code**
 - Clean, well-documented code
 - Automated testing and formatting
-- Proper error handling 
+- Proper error handling
 
 ## 📝 How to Work on This Project
 
@@ -102,7 +102,7 @@ git push
 
 Then:
 1. 📖 Read the PR_i.md file carefully
-2. 💻 Complete all the TODOs in the code  
+2. 💻 Complete all the TODOs in the code
 3. 🔧 Test your changes
 4. 📤 Open **ONE** pull request to your main branch
 5. ✅ Merge the pull request
@@ -147,16 +147,16 @@ uv sync
 
 Your project will be evaluated on:
 
-### 🔍 **Code Quality** 
+### 🔍 **Code Quality**
 - Clean, readable code structure
-- Proper naming conventions  
+- Proper naming conventions
 - Good use of docstrings and type hints
 
 ### 🎨 **Code Formatting**
 - Consistent style (automated with pre-commit)
 - Professional presentation
 
-### ⚙️ **Functionality** 
+### ⚙️ **Functionality**
 - Code runs without errors
 - All requirements implemented correctly
 
@@ -177,10 +177,10 @@ When you're done, your repository should contain:
 
 ✅ **Automated Training Pipeline**
 - [ ] Prefect workflows for model training
-- [ ] Separate modules for training and inference  
+- [ ] Separate modules for training and inference
 - [ ] Reproducible model and encoder generation
 
-✅ **Automated Deployment**  
+✅ **Automated Deployment**
 - [ ] Prefect deployment for regular retraining
 
 ✅ **Production API**
@@ -196,3 +196,24 @@ When you're done, your repository should contain:
 ---
 
 **Ready to start? Head to branch_0 and read PR_0.md for your first task! 🚀**
+
+## 🛠️ Project Setup, Quality & Continuous Integration (CI)
+This project adopts modern MLOps practices by integrating robust dependency management, automated code quality checks, and a Continuous Integration pipeline.
+
+① pyproject.toml (Dependency Management)
+
+Purpose: Defines all project dependencies and configuration settings.
+
+Key Effect: pydantic is added as a core runtime dependency；pre-commit and ruff are configured as development dependencies (within the dev group) for local tooling.
+
+② pre-commit-config.yaml (Local Code Quality Checks)
+
+Purpose: Configures the Git hook manager (pre-commit) to run checks automatically before every commit.
+
+Key Effect: Defines a series of hooks (e.g., trailing-whitespace, check-yaml, ruff, ruff-format).These checks enforce code style and catch simple errors early, preventing bad code from entering the repository history.
+
+③ github/workflows/ci.yaml (Continuous Integration Workflow)
+
+Purpose: Sets up the CI/CD pipeline using GitHub Actions.
+
+Key Effect: Triggers an automated workflow on every push and pull_request. The workflow installs dependencies, runs all pre-commit checks, and executes pytest to ensure code functionality and adherence to quality standards before merging.
