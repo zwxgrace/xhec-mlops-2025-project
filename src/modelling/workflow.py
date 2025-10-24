@@ -82,11 +82,3 @@ def predict_flow(
 
     print("Prediction flow completed.")
     return y_pred
-
-
-if __name__ == "__main__":
-    # Example with relative paths, assuming script is run from project root
-    train_model_workflow(
-        data_path="abalone.csv",
-        artifacts_filepath="src/web_service/local_objects",
-    )
