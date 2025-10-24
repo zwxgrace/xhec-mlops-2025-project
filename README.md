@@ -1,202 +1,3 @@
-<div align="center">
-
-# MLOps Project: Abalone Age Prediction
-
-[![Python Version](https://img.shields.io/badge/python-3.10%20or%203.11-blue.svg)]()
-[![Linting: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-informational?logo=pre-commit&logoColor=white)](https://github.com/artefactory/xhec-mlops-project-student/blob/main/.pre-commit-config.yaml)
-</div>
-
-## 🎯 Project Overview
-
-Welcome to your MLOps project! In this hands-on project, you'll build a complete machine learning system to predict the age of abalone (a type of sea snail) using physical measurements instead of the traditional time-consuming method of counting shell rings under a microscope.
-
-**Your Mission**: Transform a simple ML model into a production-ready system with automated training, deployment, and prediction capabilities.
-
-## 📊 About the Dataset
-
-Traditionally, determining an abalone's age requires:
-1. Cutting the shell through the cone
-2. Staining it
-3. Counting rings under a microscope (very time-consuming!)
-
-**Your Goal**: Use easier-to-obtain physical measurements (shell weight, diameter, etc.) to predict the age automatically.
-
-📥 **Download**: Get the dataset from the [Kaggle page](https://www.kaggle.com/datasets/rodolfomendes/abalone-dataset)
-
-
-## 🚀 Quick Start
-
-### Prerequisites
-- GitHub account
-- [Kaggle account](https://www.kaggle.com/account/login?phase=startRegisterTab&returnUrl=%2F) (for dataset download)
-- Python 3.10 or 3.11
-
-### Setup Steps
-
-1. **Fork this repository**
-   - ⚠️ **Important**: Uncheck "Copy the `main` branch only" to get all project branches
-
-2. **Add your team members** as admins to your forked repository
-
-3. **Set up your development environment**:
-   ```bash
-   # Create and activate a virtual environment
-   uv sync
-   source venv/bin/activate # on Windows: venv\Scripts\activate
-
-   # Install pre-commit hooks for code quality
-    uv pip install pre-commit
-    uv run pre-commit install
-   ```
-
-## 📋 What You'll Build
-
-By the end of this project, you'll have created:
-
-### 🤖 **Automated ML Pipeline**
-- Training workflows using Prefect
-- Automatic model retraining on schedule
-- Reproducible model and data processing
-
-### 🌐 **Prediction API**
-- REST API for real-time predictions
-- Input validation with Pydantic
-- Docker containerization
-
-### 📊 **Production-Ready Code**
-- Clean, well-documented code
-- Automated testing and formatting
-- Proper error handling
-
-## 📝 How to Work on This Project
-
-### The Branch-by-Branch Approach
-
-This project is organized into numbered branches, each representing a step in building your MLOps system. Think of it like a guided tutorial where each branch teaches you something new!
-
-**Here's how it works**:
-
-1. **Each branch = One pull request** with specific tasks
-2. **Follow the numbers** (branch_0, branch_1, etc.) in order
-3. **Read the PR instructions** (PR_0.md, PR_1.md, etc.) before starting
-4. **Complete all TODOs** in that branch's code
-5. **Create a pull request** when done
-6. **Merge and move to the next branch**
-
-### Step-by-Step Workflow
-
-For each numbered branch:
-
-```bash
-# Switch to the branch
-git checkout branch_number_i
-
-# Get latest changes (except for branch_1)
-git pull origin main
-# Note: A VIM window might open - just type ":wq" to close it
-
-# Push your branch
-git push
-```
-
-Then:
-1. 📖 Read the PR_i.md file carefully
-2. 💻 Complete all the TODOs in the code
-3. 🔧 Test your changes
-4. 📤 Open **ONE** pull request to your main branch
-5. ✅ Merge the pull request
-6. 🔄 Move to the next branch
-
-> **💡 Pro Tip**: Always integrate your previous work when starting a new branch (except branch_1)!
-
-### 🔍 Understanding Pull Requests
-
-Pull Requests (PRs) are how you propose and review changes before merging them into your main codebase. They're essential for team collaboration!
-
-**Important**: When creating a PR, make sure you're merging into YOUR forked repository, not the original:
-
-❌ **Wrong** (merging to original repo):
-![PR Wrong](assets/PR_wrong.png)
-
-✅ **Correct** (merging to your fork):
-![PR Right](assets/PR_right.png)
-
-## 💡 Development Tips
-
-### Managing Dependencies
-
-Use uv to manage dependencies. Install or update packages with:
-
-```bash
-uv add <package>==<version>
-```
-
-Then sync the environment and regenerate the dependency files:
-
-```bash
-uv sync
-```
-
-### Code Quality
-- The pre-commit hooks will automatically format your code
-- Remove all TODOs and unused code before final submission
-- Use clear variable names and add docstrings
-
-## 📊 Evaluation Criteria
-
-Your project will be evaluated on:
-
-### 🔍 **Code Quality**
-- Clean, readable code structure
-- Proper naming conventions
-- Good use of docstrings and type hints
-
-### 🎨 **Code Formatting**
-- Consistent style (automated with pre-commit)
-- Professional presentation
-
-### ⚙️ **Functionality**
-- Code runs without errors
-- All requirements implemented correctly
-
-### 📖 **Documentation & Reproducibility**
-- Clear README with setup instructions
-- Team member names and GitHub usernames
-- Step-by-step instructions to run everything
-
-### 🤝 **Collaboration**
-- Effective use of Pull Requests
-- Good teamwork and communication
-
----
-
-## 🎯 Final Deliverables Checklist
-
-When you're done, your repository should contain:
-
-✅ **Automated Training Pipeline**
-- [ ] Prefect workflows for model training
-- [ ] Separate modules for training and inference
-- [ ] Reproducible model and encoder generation
-
-✅ **Automated Deployment**
-- [ ] Prefect deployment for regular retraining
-
-✅ **Production API**
-- [ ] Working REST API for predictions
-- [ ] Pydantic input validation
-- [ ] Docker containerization
-
-✅ **Professional Documentation**
-- [ ] Updated README with team info
-- [ ] Clear setup and run instructions
-- [ ] All TODOs removed from code
-
----
-
-**Ready to start? Head to branch_0 and read PR_0.md for your first task! 🚀**
-
 ## 🛠️ Project Setup, Quality & Continuous Integration (CI)
 This project adopts modern MLOps practices by integrating robust dependency management, automated code quality checks, and a Continuous Integration pipeline.
 
@@ -223,12 +24,249 @@ Key Effect: Triggers an automated workflow on every push and pull_request. The w
 uv run python -m src.modelling.main ./abalone.csv
 ```
 
-### Predict (example)
+### 🐚 Abalone Prediction API — Deployment & Workflow Guide
+
+This guide walks you through the complete process of building the Docker image, running the container, deploying Prefect workflows, training the model, generating predictions, and checking your results — all in a clear, step-by-step manner.
+
+
+### ⚙️ Environment Overview
+
+| Component            | Description                      | Port (Container → Host)               |
+| -------------------- | -------------------------------- | ------------------------------------- |
+| **FastAPI**          | Online prediction API            | 8001 → **8000**                       |
+| **Prefect Orion UI** | Workflow orchestration dashboard | 4201 → **4200**                       |
+| **Model Artifacts**  | Trained model & preprocessor     | `/app/src/web_service/local_objects/` |
+
+
+### 🚀 Step 1. Build Docker Image
+
+We start by building the image and launching your container. This will create an isolated environment where both FastAPI and Prefect can run together.
+
 ```bash
-uv run python - <<'PY'
-from src.modelling.predicting import predict_batch
-print(predict_batch('abalone.csv',
-  'src/web_service/local_objects/model.pkl',
-  'src/web_service/local_objects/preprocessor.pkl')[:5])
-PY
+docker build --no-cache -t abalone-prediction-api -f Dockerfile.app .
 ```
+✅ Expected output:
+```
+Successfully built <IMAGE_ID>
+Successfully tagged abalone-prediction-api:latest
+```
+
+### 🧩 Step 2. Run the Container
+
+Then, you'll run the container in docker.
+
+```bash
+docker run -d -p 8000:8001 -p 4200:4201 --name abalone_api_service abalone-prediction-api
+```
+✅ Expected output:
+```
+<CONTAINER_ID>
+```
+At this point, you’re inside the container environment (root@/app) — all subsequent deployment commands will be run here.
+
+## Check container is running:
+```bash
+docker ps
+```
+You should see something like:
+CONTAINER ID   IMAGE                     PORTS                                        NAMES
+abcd1234...    abalone-prediction-api    0.0.0.0:8000->8001/tcp, 0.0.0.0:4200->4201/tcp   abalone_api_service
+
+
+### 🧠 Step 3. Enter the Container & Deploy Prefect Workflows
+
+Once the container is up, enter it to interact with Prefect directly:
+
+```bash
+docker exec -it abalone_api_service bash
+```
+
+Inside the container you should see:
+```
+root@<container_id>:/app#
+```
+
+All commands below are executed inside the container (root@/app).
+Next, you’ll deploy two Prefect workflows: one for training the model and one for batch prediction.
+These flows will appear in the Prefect UI after deployment.
+
+## (A) Deploy the Training Workflow
+
+```bash
+export PREFECT_API_URL='http://localhost:4201/api'
+prefect deploy src/modelling/workflow.py:train_model_workflow -n "Model Retraining Deployment" --pool "default"
+```
+
+You should now see this in Prefect UI →
+👉 http://localhost:4200
+ → Deployments → Train model / Model Retraining Deployment
+
+ ## (B) Deploy the Batch Prediction Workflow
+
+ ```bash
+ export PREFECT_API_URL='http://localhost:4201/api'
+prefect deploy src/modelling/workflow.py:predict_flow -n "Batch Prediction" --pool "default"
+```
+
+Now you’ll see both deployments in Prefect UI:
+
+Train model / Model Retraining Deployment
+Batch predict / Batch Prediction
+
+
+### 🧮 Step 4. Run the Training Deployment
+
+Now let’s actually train the model. This flow will read the abalone.csv dataset, train a regression model, and save the resulting files inside /app/src/web_service/local_objects/.
+
+```bash
+export PREFECT_API_URL='http://localhost:4201/api'
+prefect deployment run 'Train model/Model Retraining Deployment' \
+  -p data_path='/app/abalone.csv' \
+  -p artifacts_filepath='/app/src/web_service/local_objects'
+```
+
+When prompted:
+| Question               | Answer | Meaning                          |
+| ---------------------- | ------ | -------------------------------- |
+| Pull code from remote? | **n**  | Code already in the container    |
+| Configure schedule?    | **n**  | We'll schedule later manually    |
+| Save configuration?    | **y**  | So future deployments are faster |
+
+During the run, Prefect will log the progress and metrics (like RMSE, MAE, R²).
+
+
+
+### 🧭 Step 5. Run the Batch Prediction Flow
+
+After training, you can generate predictions using the new model.
+This step can be executed from your host machine (no need to re-enter the container).
+
+(If you exit the container, you need to enter it again.)
+```bash
+docker exec -it abalone_api_service bash
+```
+Then,
+
+```bash
+cd /app
+export PREFECT_API_URL='http://localhost:4201/api'
+prefect deployment run 'Batch predict/Batch Prediction' \
+  -p input_filepath='/app/abalone.csv' \
+  -p model_path='/app/src/web_service/local_objects/model.pkl' \
+  -p preproc_path='/app/src/web_service/local_objects/preprocessor.pkl' \
+  -p output_path='/app/src/web_service/local_objects/batch_predictions.csv'
+```
+
+✅ Expected output:
+```
+Flow run 'Batch predict/Batch Prediction' submitted for execution.
+Running task 'predict_batch'...
+Predictions saved to /app/src/web_service/local_objects/batch_predictions.csv
+Flow run completed successfully!
+```
+
+You’ve now generated predictions using the trained model.
+
+
+### 🔁 Step 6. (Optional) Schedule Automatic Retraining
+
+If you want your model to automatically retrain every hour, you can add a simple schedule:
+```bash
+docker exec -w /app abalone_api_service bash -c \
+"export PREFECT_API_URL='http://localhost:4201/api' && \
+prefect deploy src/modelling/workflow.py:train_model_workflow \
+  -n 'Model Retraining Deployment' --pool 'default' --interval '3600'"
+```
+
+Prefect will confirm:
+Deployment 'Train model/Model Retraining Deployment' updated with interval schedule (every 3600 seconds)
+
+In the Prefect UI, a 🕒 icon next to the deployment name indicates that it’s scheduled automatically.
+
+
+### Step 7. Check Results and Outputs
+
+Once the workflows are complete, you can view their results in several ways:
+
+| What to check                 | Where to look                                                | Expected Output                 |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------- |
+| **Training status / metrics** | Prefect UI → *Train model → Flow Runs*                       | RMSE, MAE, R² metrics in logs   |
+| **Prediction output file**    | `/app/src/web_service/local_objects/batch_predictions.csv`   | CSV with predicted ages         |
+| **FastAPI health**            | [http://localhost:8000/health](http://localhost:8000/health) | `{"ready": true}`               |
+| **FastAPI docs**              | [http://localhost:8000/docs](http://localhost:8000/docs)     | Interactive `/predict` endpoint |
+
+
+### Steo 8. Test the Prediction API
+
+Once your model is trained and the FastAPI service is running, you can test the prediction endpoint directly using curl.
+
+Make sure you use the correct field names (Sex, Length, Diameter, etc.) — they must match exactly what the model expects in your preprocessing pipeline.
+
+```bash
+curl -X POST "http://localhost:8000/predict" \
+  -H "Content-Type: application/json" \
+  -d '{"Sex":"M","Length":0.45,"Diameter":0.36,"Height":0.11,"Whole_weight":0.95,"Shucked_weight":0.42,"Viscera_weight":0.19,"Shell_weight":0.30}'
+```
+
+🔹 Expected Response
+
+If the API and model are working correctly, you should receive a JSON object like this:
+
+{
+  "predictions": [10.72],
+  "n_samples": 1
+}
+
+This confirms:
+
+The FastAPI service is running and reachable at port 8000
+
+Your trained model and preprocessor were successfully loaded
+
+The input data was parsed and processed correctly
+
+You can also open the interactive API documentation at http://localhost:8000/docs, click POST /predict, paste the same JSON body, and test it through the Swagger UI.
+
+
+### Step 9. Retrieve or Inspect Saved Artifacts
+
+To verify your generated files inside the container:
+
+```bash
+docker exec -it abalone_api_service ls /app/src/web_service/local_objects
+```
+
+You should see:
+
+model.pkl
+preprocessor.pkl
+batch_predictions.csv
+
+If you wish to copy the prediction file to your host:
+```bash
+docker cp abalone_api_service:/app/src/web_service/local_objects/batch_predictions.csv ./batch_predictions.csv
+```
+
+
+
+### 🔚 Final Notes
+
+At this stage:
+
+Your Docker container hosts both Prefect and FastAPI services.
+
+Prefect orchestrates model training and batch prediction.
+
+FastAPI provides online prediction through /predict.
+
+You can monitor training progress, view logs, and inspect metrics directly in the Prefect UI at http://localhost:4200.
+
+When finished, you can clean up the environment:
+
+```bash
+docker stop abalone_api_service && docker rm abalone_api_service
+```
+
+
+### ✅ Congratulations!
+You have successfully built, deployed, trained, and served a machine learning model using Docker, Prefect, and FastAPI — all in one reproducible workflow.

@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ /app/src/
 
 COPY bin/run_services.sh /app/bin/run_services.sh
+COPY abalone.csv /app/abalone.csv
 
 # use dos2unix to convert line endings from Windows to Unix format
 RUN apt-get update && \
