@@ -196,7 +196,7 @@ Once the workflows are complete, you can view their results in several ways:
 | **FastAPI docs**              | [http://localhost:8000/docs](http://localhost:8000/docs)     | Interactive `/predict` endpoint |
 
 
-### Steo 8. Test the Prediction API
+### Step 8. Test the Prediction API
 
 Once your model is trained and the FastAPI service is running, you can test the prediction endpoint directly using curl.
 
