@@ -13,12 +13,13 @@ from .training import train_and_save
 ARTIFACTS_DIR = Path(__file__).resolve().parents[1] / "web_service" / "local_objects"
 MODEL_PATH = ARTIFACTS_DIR / "model.pkl"
 PREPROCESSOR_PATH = ARTIFACTS_DIR / "preprocessor.pkl"
+DEFAULT_DATASET = Path(__file__).resolve().parents[2] / "abalone.csv"
 
 
 @flow(name="Train model")
 def train_model_workflow(
-    data_path: str,
-    artifacts_filepath: Optional[str] = None,
+    data_path: str = str(DEFAULT_DATASET),
+    artifacts_filepath: str = str(ARTIFACTS_DIR),
     test_size: float = 0.2,
     random_state: int = 42,
 ) -> Dict[str, Any]:
@@ -64,9 +65,9 @@ def train_model_workflow(
 
 @flow(name="Batch predict", retries=1, retry_delay_seconds=30)
 def predict_flow(
-    input_filepath: str,
-    model_path: str,
-    preproc_path: str,
+    input_filepath: str = str(DEFAULT_DATASET),
+    model_path: str = str(MODEL_PATH),
+    preproc_path: str = str(PREPROCESSOR_PATH),
     output_path: Optional[str] = None,
 ) -> np.ndarray:
     """
