@@ -1,0 +1,14 @@
+# --- API & Server ---
+fastapi
+uvicorn[standard]
+
+# --- Data Handling & ML ---
+pandas
+scikit-learn
+joblib
+
+# --- Data Validation ---
+pydantic
+
+# --- Core Dependencies (from modelling) ---
+prefect
