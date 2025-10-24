@@ -17,7 +17,7 @@ description = "X-HEC MLOps Project on Abalone age prediction model"
 readme = "README.md"
 requires-python = ">=3.11"
 
-# TODO: add pydantic, pre-commit and ruff as a dependency
+# Add pydantic, pre-commit and ruff as a dependency
 
 dependencies = [
   "pydantic>=2.0",
