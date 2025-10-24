@@ -7,6 +7,8 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from prefect import task
+
 NUM_FEATURES: List[str] = [
     "Length",
     "Diameter",
@@ -52,6 +54,7 @@ def _build_column_transformer() -> ColumnTransformer:
     return ct
 
 
+@task(name="preprocess-for-training", tags={"preprocess", "training", "ml"})
 def preprocess_for_training(
     df: pd.DataFrame,
 ) -> Tuple[pd.DataFrame, pd.Series, Preprocessor]:
@@ -72,6 +75,7 @@ def preprocess_for_training(
     return X_df, y, preproc
 
 
+@task(name="preprocess-for-inference", tags={"preprocess", "inference", "ml"})
 def preprocess_for_inference(df: pd.DataFrame, preproc: Preprocessor) -> pd.DataFrame:
     """
     original df (may not contain TARGET) and returns a DataFrame of features with columns consistent with those at training

@@ -28,6 +28,7 @@ dependencies = [
   "numpy>=1.26",
   "matplotlib>=3.8",
   "seaborn>=0.13",
+  "prefect>=2.14.0",
 ]
 
 [project.optional-dependencies]
