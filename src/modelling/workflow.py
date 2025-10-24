@@ -85,7 +85,8 @@ def predict_flow(
 
 
 if __name__ == "__main__":
+    # Example with relative paths, assuming script is run from project root
     train_model_workflow(
-        data_path="/Users/tiantiandawang/Desktop/MLops_project/xhec-mlops-2025-project/abalone.csv",
-        artifacts_filepath="/Users/tiantiandawang/Desktop/MLops_project/xhec-mlops-2025-project/src/web_service/local_objects",
+        data_path="abalone.csv",
+        artifacts_filepath="src/web_service/local_objects",
     )
